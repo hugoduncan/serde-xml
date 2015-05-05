@@ -132,6 +132,11 @@ where Iter: Iterator<Item=io::Result<u8>>,
         if DEBUG { println!("InnerDeserializer::visit_enum"); }
         visitor.visit(VariantVisitor(&mut self.0))
     }
+
+    #[inline]
+    fn format() -> &'static str {
+        "xml"
+    }
 }
 
 pub struct KeyDeserializer<'a> (
@@ -296,6 +301,11 @@ impl<Iter> de::Deserializer for Deserializer<Iter>
         }
         expect!(self.rdr, EndOfFile, "end of file");
         Ok(v)
+    }
+
+    #[inline]
+    fn format() -> &'static str {
+        "xml"
     }
 }
 

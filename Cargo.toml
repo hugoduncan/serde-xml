@@ -7,8 +7,17 @@ description = "xml support for rust-serde"
 repository = "https://github.com/oli-obk/serde-xml"
 
 [dependencies.serde]
-git = "https://github.com/oli-obk/serde-xml.git"
-branch = "xml_requirements"
+# git = "https://github.com/erickt/rust-serde.git"
+# <<<<<<< HEAD
+# git = "https://github.com/oli-obk/serde-xml.git"
+# branch = "xml_requirements"
+# =======
+# git = "https://github.com/hugoduncan/rust-serde.git"
+# branch = "feature/format-specific-field-names"
+# >>>>>>> 7a8ad47... Update for format specific renames
+
+git = "https://github.com/hugoduncan/rust-serde.git"
+branch = "integration"
 
 [dev-dependencies]
 serde_macros = "*"
